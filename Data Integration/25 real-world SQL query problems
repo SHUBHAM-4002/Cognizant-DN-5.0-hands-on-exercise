@@ -1,0 +1,139 @@
+-- =========================================
+-- STUDENT MANAGEMENT SYSTEM
+-- MODULE 1 - ANSI SQL USING PostgreSQL
+-- 25 SQL PRACTICE QUERIES
+-- =========================================
+
+-- 1. Display All Students
+SELECT *
+FROM students;
+
+-- 2. Display Student Names
+SELECT first_name, last_name
+FROM students;
+
+-- 3. Students from ECE Department
+SELECT *
+FROM students
+WHERE department = 'ECE';
+
+-- 4. Students Scoring Above 85
+SELECT *
+FROM students
+WHERE marks > 85;
+
+-- 5. Students Ordered by Marks
+SELECT *
+FROM students
+ORDER BY marks DESC;
+
+-- 6. Students Ordered Alphabetically
+SELECT *
+FROM students
+ORDER BY first_name;
+
+-- 7. Total Number of Students
+SELECT COUNT(*) AS total_students
+FROM students;
+
+-- 8. Average Marks
+SELECT ROUND(AVG(marks),2) AS average_marks
+FROM students;
+
+-- 9. Highest Marks
+SELECT MAX(marks) AS highest_marks
+FROM students;
+
+-- 10. Lowest Marks
+SELECT MIN(marks) AS lowest_marks
+FROM students;
+
+-- 11. Students in Final Year
+SELECT *
+FROM students
+WHERE year_of_study = 4;
+
+-- 12. Students with Gmail Accounts
+SELECT *
+FROM students
+WHERE email LIKE '%gmail.com';
+
+-- 13. Department-wise Student Count
+SELECT department,
+COUNT(*) AS total_students
+FROM students
+GROUP BY department
+ORDER BY total_students DESC;
+
+-- 14. Department-wise Average Marks
+SELECT department,
+ROUND(AVG(marks),2) AS average_marks
+FROM students
+GROUP BY department
+ORDER BY average_marks DESC;
+
+-- 15. Students with Marks Between 80 and 95
+SELECT *
+FROM students
+WHERE marks BETWEEN 80 AND 95;
+
+-- 16. Top 5 Students
+SELECT *
+FROM students
+ORDER BY marks DESC
+LIMIT 5;
+
+-- 17. Students Scoring Above Average
+SELECT *
+FROM students
+WHERE marks >
+(
+SELECT AVG(marks)
+FROM students
+);
+
+-- 18. Student with Highest Marks
+SELECT *
+FROM students
+WHERE marks =
+(
+SELECT MAX(marks)
+FROM students
+);
+
+-- 19. Search Student by Name
+SELECT *
+FROM students
+WHERE first_name ILIKE '%ya%';
+
+-- 20. Search Student by Department
+SELECT *
+FROM students
+WHERE department='CSE';
+
+-- 21. Students with Attendance Above 90
+SELECT *
+FROM students
+WHERE attendance > 90;
+
+-- 22. Year-wise Student Count
+SELECT year_of_study,
+COUNT(*) AS total_students
+FROM students
+GROUP BY year_of_study
+ORDER BY year_of_study;
+
+-- 23. Departments Having More Than One Student
+SELECT department,
+COUNT(*) AS total_students
+FROM students
+GROUP BY department
+HAVING COUNT(*) > 1;
+
+-- 24. Student Summary View
+SELECT *
+FROM vw_student_summary;
+
+-- 25. Department Statistics View
+SELECT *
+FROM vw_department_statistics;
