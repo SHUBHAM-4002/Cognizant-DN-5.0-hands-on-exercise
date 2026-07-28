@@ -1,0 +1,325 @@
+import { JobDescription, Candidate } from "../types";
+
+export const seedJobs: JobDescription[] = [
+  {
+    id: "job-senior-ai-engineer",
+    title: "Senior AI Engineer (LLM & GenAI)",
+    experience: "5+ years",
+    skills: ["Python", "PyTorch", "LLMs", "LangChain", "FastAPI", "Vector Databases", "Transformers", "RAG"],
+    education: "Master's or Ph.D. in Computer Science, AI, or related field preferred",
+    responsibilities: [
+      "Design and implement scalable Retrieval-Augmented Generation (RAG) pipelines for enterprise search.",
+      "Fine-tune open-source models (Llama, Mistral) for domain-specific NLP applications.",
+      "Build high-throughput server APIs using FastAPI and integrate with LangChain and vector indexes.",
+      "Collaborate with product and engineering teams to deploy resilient generative AI features in production.",
+      "Maintain rigorous evaluation metrics and latency standards for live model inference."
+    ],
+    preferredSkills: ["Kubernetes", "Docker", "AWS", "Google Cloud", "Trulens", "LlamaIndex"],
+    industry: "SaaS / Tech Recruitment",
+    softSkills: ["Technical Leadership", "Problem Solving", "Cross-functional Collaboration", "Communication"],
+    rawText: `Role: Senior AI Engineer (LLM & GenAI)
+Experience Required: 5+ years of software development and ML engineering experience.
+Core Skills: Python, PyTorch, LLMs, LangChain, FastAPI, Vector Databases (FAISS, Milvus), Transformers, RAG pipelines.
+Education: M.S. or Ph.D. in Computer Science, Data Science, or related field.
+Responsibilities:
+- Build and optimize Retrieval-Augmented Generation (RAG) platforms.
+- Fine-tune large language models (LLMs) to match proprietary domain datasets.
+- Implement scalable microservices using FastAPI and Docker.
+- Define evaluation frameworks for generative AI models.`,
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "job-senior-frontend-engineer",
+    title: "Senior Frontend Engineer (React & Tailwind)",
+    experience: "4+ years",
+    skills: ["React", "TypeScript", "TailwindCSS", "Next.js", "Vite", "Framer Motion", "State Management (Zustand/Redux)"],
+    education: "Bachelor's in Computer Science or equivalent practical experience",
+    responsibilities: [
+      "Develop highly responsive SaaS dashboard user interfaces using React and Tailwind.",
+      "Implement smooth page transitions and micro-animations using Framer Motion.",
+      "Design accessible (WCAG compliant) web workflows with atomic component patterns.",
+      "Optimize web application performance, bundle sizes, and image render pipelines."
+    ],
+    preferredSkills: ["GraphQL", "REST APIs", "Jest", "Playwright", "Node.js"],
+    industry: "SaaS Enterprise Software",
+    softSkills: ["UX/UI Empathy", "Design Systems Thinking", "Code Quality Ownership"],
+    rawText: `Role: Senior Frontend Engineer
+Required Experience: 4+ years of professional web development experience.
+Skills: React, TypeScript, TailwindCSS, Next.js, Framer Motion, Zustand.
+Responsibilities: Build beautiful interactive recruiter dashboards, optimize rendering, implement responsive state flows, own user interface and design consistency.`,
+    createdAt: new Date().toISOString()
+  }
+];
+
+export const seedCandidates: Candidate[] = [
+  {
+    id: "cand-alex-rivera",
+    name: "Alex Rivera",
+    email: "alex.rivera@cs.stanford.edu",
+    phone: "+1 (555) 345-6789",
+    skills: ["Python", "PyTorch", "LLMs", "LangChain", "FastAPI", "Vector Databases", "Transformers", "RAG", "LlamaIndex", "Docker", "Google Cloud", "SQL"],
+    projects: [
+      {
+        title: "Enterprise DocuSearch RAG Engine",
+        description: "Created a hybrid semantic search agent indexing over 50,000 PDF documents using pgvector and LlamaIndex. Decreased latency by 45% using text-chunking optimization.",
+        technologies: ["Python", "LlamaIndex", "FastAPI", "PostgreSQL", "Docker"]
+      },
+      {
+        title: "Fine-Tuned Medical Summarizer",
+        description: "Fine-tuned Llama-3-8B on specialized medical corpora using LoRA/QLoRA, achieving an 18% increase in clinical correctness compared to base GPT-4 summaries.",
+        technologies: ["PyTorch", "Hugging Face", "QLoRA", "Python"]
+      }
+    ],
+    education: [
+      {
+        degree: "M.S. in Computer Science (AI Track)",
+        school: "Stanford University",
+        year: "2020"
+      },
+      {
+        degree: "B.S. in Computer Science",
+        school: "UC Berkeley",
+        year: "2018"
+      }
+    ],
+    experience: [
+      {
+        role: "Lead Machine Learning Engineer",
+        company: "Synthetix AI",
+        duration: "2021 - Present (5 years)",
+        details: "Architected core Generative AI platforms. Led a team of 4 engineers to deploy RAG pipelines for legal text review, handling 1M+ queries daily. Fine-tuned open-source LLMs.",
+        yearsOfExp: 5
+      },
+      {
+        role: "AI Software Engineer",
+        company: "Cognitive Solutions",
+        duration: "2020 - 2021 (1 year)",
+        details: "Developed backend APIs using FastAPI to serve machine learning models. Built automated pipelines for preprocessing multimodal tabular and text datasets.",
+        yearsOfExp: 1
+      }
+    ],
+    certifications: ["AWS Certified Machine Learning - Specialty", "DeepLearning.AI Generative AI with LLMs"],
+    github: "github.com/alexrivera-ai",
+    linkedin: "linkedin.com/in/alexrivera-ai",
+    achievements: [
+      "1st Place at the SF Generative AI Hackathon (2023) for building an AI-powered smart agent.",
+      "Co-authored research paper on 'Adaptive Chunking Strategies in Dense Retrievers' (NeurIPS Workshop)."
+    ],
+    behaviorSignals: [
+      "Exhibits deep technical humility and continuous learning capacity.",
+      "Strong mentorship profile—loves leading paper review circles.",
+      "Proactive communicator; manages expectation boundaries effectively across product and engineering teams."
+    ],
+    summary: "Senior AI & Machine Learning Specialist with a robust background in Stanford CS and production-level NLP systems. Expert in constructing efficient, low-latency search agents, custom fine-tuning techniques, and deployment microservices.",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "cand-priya-sharma",
+    name: "Priya Sharma",
+    email: "priya.sharma@mltech.dev",
+    phone: "+1 (555) 789-0123",
+    skills: ["Python", "scikit-learn", "FastAPI", "Docker", "AWS", "SQL", "Pandas", "TensorFlow", "Kubernetes", "Git", "Jenkins", "PyTorch"],
+    projects: [
+      {
+        title: "Predictive Customer Churn Pipeline",
+        description: "Implemented an end-to-end predictive tabular pipeline using XGBoost and lightGBM serving real-time risk scores. Achieved a savings of $200k/year in customer retention.",
+        technologies: ["Python", "scikit-learn", "XGBoost", "FastAPI", "AWS CloudWatch"]
+      },
+      {
+        title: "Distributed Model Server",
+        description: "Set up a highly resilient, auto-scaling Kubernetes cluster hosting deep learning vision models, lowering server operating costs by 30% through model-quantization.",
+        technologies: ["TensorFlow", "Kubernetes", "Docker", "AWS", "Prometheus"]
+      }
+    ],
+    education: [
+      {
+        degree: "B.Tech in Computer Science & Engineering",
+        school: "IIT Delhi",
+        year: "2019"
+      }
+    ],
+    experience: [
+      {
+        role: "Senior MLOps & Machine Learning Engineer",
+        company: "Apex Analytics Inc.",
+        duration: "2021 - Present (5 years)",
+        details: "Built enterprise-wide model registry, monitoring, and automated retraining pipelines. Oversaw migration from monolithic model serving to containerized FastAPI microservices.",
+        yearsOfExp: 5
+      },
+      {
+        role: "Data Scientist",
+        company: "CoreTech Labs",
+        duration: "2019 - 2021 (2 years)",
+        details: "Cleaned complex tabular databases and engineered mathematical features. Constructed classification models and collaborated with BI analysts for executive dashboards.",
+        yearsOfExp: 2
+      }
+    ],
+    certifications: ["Google Cloud Professional Machine Learning Engineer", "Docker Certified Associate"],
+    github: "github.com/priyasharma-dev",
+    linkedin: "linkedin.com/in/priya-sharma-ml",
+    achievements: [
+      "Led Apex MLOps transition resulting in team-wide deployment time reduction from 2 weeks to 1 hour.",
+      "Invited speaker at PyData Chicago on containerized model serving with FastAPI."
+    ],
+    behaviorSignals: [
+      "Highly methodical, rigorous system-designer with exceptional analytical hygiene.",
+      "Prefers stable, robust software engineering principles over chasing flashiest trends.",
+      "Clear, detailed style of documentation; excellent cross-functional partner."
+    ],
+    summary: "Senior MLOps and Machine Learning Engineer specializing in production ML platforms, scalable inference endpoints, and automated pipeline orchestration. Experienced in AWS and GCP deployments.",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "cand-marcus-vance",
+    name: "Marcus Vance",
+    email: "marcus.vance@frontendweb.com",
+    phone: "+1 (555) 456-7890",
+    skills: ["React", "TypeScript", "TailwindCSS", "Next.js", "Vite", "Framer Motion", "Node.js", "Zustand", "Redux", "Express", "HTML/CSS", "JavaScript", "Python"],
+    projects: [
+      {
+        title: "Recruiter Kanban Board & Analytics Suite",
+        description: "Designed a drag-and-drop recruiter pipeline management system using Tailwind and Framer Motion. Handled smooth rendering of 5,000+ interactive candidate cards.",
+        technologies: ["React", "TypeScript", "TailwindCSS", "Zustand", "Framer Motion"]
+      },
+      {
+        title: "Developer Documentation Hub",
+        description: "Coded a high-speed markdown-driven document indexing site leveraging Next.js static site generation. Implemented client-side fuzzy search reducing page load time to 1.2s.",
+        technologies: ["Next.js", "TailwindCSS", "TypeScript", "Algolia"]
+      }
+    ],
+    education: [
+      {
+        degree: "B.S. in Software Engineering",
+        school: "Georgia Institute of Technology",
+        year: "2020"
+      }
+    ],
+    experience: [
+      {
+        role: "Senior Frontend Engineer",
+        company: "SaaSify Systems",
+        duration: "2022 - Present (4 years)",
+        details: "Managed and expanded a centralized design system. Spearheaded performance optimizations on the company's core web application dashboard, increasing Core Web Vitals by 24%.",
+        yearsOfExp: 4
+      },
+      {
+        role: "Software Developer",
+        company: "AppCraft Studio",
+        duration: "2020 - 2022 (2 years)",
+        details: "Developed customer portals and visual drag-and-drop builders for business automation. Integrated several dozen GraphQL and REST API web gateways.",
+        yearsOfExp: 2
+      }
+    ],
+    certifications: ["React Certified Professional", "AWS Certified Cloud Practitioner"],
+    github: "github.com/marcusvance-codes",
+    linkedin: "linkedin.com/in/marcusvance-web",
+    achievements: [
+      "Re-architected enterprise frontend code splitting, yielding a 35% smaller initial bundle size.",
+      "Mentored 3 junior developers and established code review guidelines for the frontend squad."
+    ],
+    behaviorSignals: [
+      "Extremely strong design empathy and attention to interactive feedback.",
+      "Collaborative and highly communicative; loves working alongside UX designers.",
+      "A champion of linting, type-safety, and clean UI state separation."
+    ],
+    summary: "Polished Senior Frontend Developer with expertise in building gorgeous React dashboards, Next.js optimization, and state management. Passionate about interactive animations and smooth UX.",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "cand-emily-chen",
+    name: "Dr. Emily Chen",
+    email: "emily.chen@ai-research.org",
+    phone: "+1 (555) 901-2345",
+    skills: ["Python", "PyTorch", "LLMs", "Transformers", "NLP", "TensorFlow", "Pandas", "Matplotlib", "Research", "Latex"],
+    projects: [
+      {
+        title: "Pre-Training Multimodal Transformers",
+        description: "Led research on training transformers on paired text-spectrogram data for audio captioning. Published findings at ICML, proving improved cross-modal representation alignment.",
+        technologies: ["Python", "PyTorch", "Hugging Face Accelerate", "CUDA"]
+      },
+      {
+        title: "Low-Resource Machine Translation",
+        description: "Designed a lightweight decoder architecture for translation in low-resource dialetical languages, improving BLEU scores by 4.2 points.",
+        technologies: ["PyTorch", "Python", "Hugging Face"]
+      }
+    ],
+    education: [
+      {
+        degree: "Ph.D. in Computer Science (NLP Focus)",
+        school: "MIT",
+        year: "2022"
+      },
+      {
+        degree: "B.S. in Mathematics",
+        school: "Princeton University",
+        year: "2017"
+      }
+    ],
+    experience: [
+      {
+        role: "Research Scientist (Postdoc)",
+        company: "MIT CSAIL",
+        duration: "2022 - Present (4 years)",
+        details: "Published 5 papers in NeurIPS, ICML, and ACL focusing on memory-efficient transformer attention mechanisms. Spearheaded academic collaborations on efficient sequence modeling.",
+        yearsOfExp: 4
+      }
+    ],
+    certifications: [],
+    github: "github.com/emilychen-research",
+    linkedin: "linkedin.com/in/emily-chen-nlp",
+    achievements: [
+      "Co-invented the 'Segmented Attention' method for processing 100k+ sequence lengths.",
+      "Awarded MIT CSAIL Outstanding Graduate Researcher (2021)."
+    ],
+    behaviorSignals: [
+      "Deeply intellectual, research-focused thinker; thrives on solving open-ended abstract math and AI challenges.",
+      "Prefers mathematical elegance and theoretical accuracy over rapid production cycles.",
+      "Excels in technical lecturing, writing research papers, and theoretical validation."
+    ],
+    summary: "Distinguished NLP Researcher with a Ph.D. from MIT and deep specialized knowledge in attention layers, tokenizers, and multimodal model training. Strong mathematician and theoretical designer.",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "cand-jordan-taylor",
+    name: "Jordan Taylor",
+    email: "jordan.taylor@analytics.net",
+    phone: "+1 (555) 234-5678",
+    skills: ["Python", "SQL", "Pandas", "NumPy", "Tableau", "Excel", "Data Analytics", "PowerBI"],
+    projects: [
+      {
+        title: "Sales Automation Dashboard",
+        description: "Consolidated raw sales databases from Salesforce into a unified, interactive Tableau suite. Improved regional sales forecasting precision by 12%.",
+        technologies: ["Tableau", "SQL", "Excel", "Python"]
+      }
+    ],
+    education: [
+      {
+        degree: "B.A. in Economics",
+        school: "University of Washington",
+        year: "2023"
+      }
+    ],
+    experience: [
+      {
+        role: "Junior Data Analyst",
+        company: "Local Retail Hub",
+        duration: "2023 - Present (3 years)",
+        details: "Maintained data pipelines extracting sales figures. Designed custom reports for inventory management and executed SQL queries to clean tabular transaction sheets.",
+        yearsOfExp: 3
+      }
+    ],
+    certifications: ["Tableau Desktop Specialist", "Google Data Analytics Professional Certificate"],
+    github: "github.com/jordantaylor-data",
+    linkedin: "linkedin.com/in/jordan-taylor-analytics",
+    achievements: [
+      "Automated weekly manual inventory sheet uploads in Python, saving 4 hours of team work per week."
+    ],
+    behaviorSignals: [
+      "Keen attention to tabular details and dashboard visualization.",
+      "Highly enthusiastic learner, seeks opportunities to gain modern Python ML and NLP experience.",
+      "Dependable team player with strong customer-first listening skills."
+    ],
+    summary: "Enthusiastic Junior Data Analyst proficient in SQL, Python pandas, and BI reporting tools. Passionate about transitioning into automated data workflows and modern analytics pipelines.",
+    createdAt: new Date().toISOString()
+  }
+];

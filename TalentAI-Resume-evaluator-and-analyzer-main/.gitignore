@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# Challenge dataset
+datasets/
+*.jsonl
+
+# Output
+outputs/
+
+# Python cache
+__pycache__/
+*.pyc

@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .mesh-gradient {
+    background: radial-gradient(circle at 10% 10%, #1e1b4b 0%, transparent 45%),
+                radial-gradient(circle at 90% 90%, #312e81 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, #4c1d95 0%, transparent 50%);
+    filter: blur(80px);
+    opacity: 0.7;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-sidebar {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 15px rgba(139, 92, 246, 0.55);
+  }
+
+  .accent-gradient {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  }
+
+  .accent-gradient-hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+  }
+
+  /* Custom styling for sleek scrollbars in glass views */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.01);
+    border-radius: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.16);
+  }
+}
+
+body {
+  background-color: #05010d;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
